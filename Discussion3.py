@@ -4,26 +4,33 @@ class Rectangle():
     # Create the constructor "__init__" method
 
     # YOUR CODE HERE
-
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
 
 
     # Create the "__str__" method
 
     # YOUR CODE HERE
-
+    def __str__(self):
+        return f"A rectangle with width {self.width} and height {self.height}"
 
 
     # Create the "area_calculator" method
 
     # YOUR CODE HERE
-
+    def area_calculator(self):
+        return self.width * self.height
 
 
     # Create the "__eq__" method
-    # 
-    # Returns a boolean value
 
     # YOUR CODE HERE
+    def __eq__(self, other):
+        if self.width == other.width and self.height == other.height:
+            return True
+        else:
+            return False
 
 
     
@@ -35,7 +42,7 @@ def main():
     print(r1)
     # call the area_calculator method
     print("Area:", r1.area_calculator())
-
+    print()
 
     r2 = Rectangle(10, 15)
     print(r2)
@@ -46,6 +53,12 @@ def main():
 
     # you can create additional rectangle objects to 
     # test your code or learn more about how the class behaves
+
+    r3 = Rectangle(10, 15)
+    print(r3)
+    print("Area:", r3.area_calculator())
+    print(r2 == r3)
+    print()
     pass
 
 if __name__ == "__main__":
